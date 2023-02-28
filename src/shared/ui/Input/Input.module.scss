@@ -1,0 +1,13 @@
+.Input {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.placeholder {
+  margin-right: 5px;
+}
+
+.input {
+  color: var(--primary-color);
+}
