@@ -16,7 +16,7 @@
 - axios
 - eslint
 - stylelint
-- 
+
 ## Функционал
 
 ##  Установка зависимостей
@@ -37,5 +37,5 @@
 
 ##### `npm run test:unit` – выполнить unit тесты
 
-##### `npm run test:ui` – выполнить un тесты
+##### `npm run test:ui` – выполнить ui тесты
 
