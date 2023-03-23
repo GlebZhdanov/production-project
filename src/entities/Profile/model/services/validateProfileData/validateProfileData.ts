@@ -2,10 +2,11 @@ import { Profile, ValidateProfileError } from '../../types/profile';
 
 export const validateProfileData = (profile?: Profile) => {
   if (!profile) {
-    return [ValidateProfileError.INCORRECT_NO_DATA];
+    return [ValidateProfileError.NO_DATA];
   }
+
   const {
-    first, lastname, age, city,
+    first, lastname, age, country,
   } = profile;
 
   const errors: ValidateProfileError[] = [];
@@ -18,8 +19,8 @@ export const validateProfileData = (profile?: Profile) => {
     errors.push(ValidateProfileError.INCORRECT_AGE);
   }
 
-  if (!city) {
-    errors.push(ValidateProfileError.INCORRECT_CITY);
+  if (!country) {
+    errors.push(ValidateProfileError.INCORRECT_COUNTRY);
   }
 
   return errors;
