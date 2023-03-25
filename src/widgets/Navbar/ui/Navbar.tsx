@@ -16,11 +16,12 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const [isAuthModal, setIsAuthModal] = useState(false);
   const authData = useSelector(getUserAuthData);
   const dispatch = useDispatch();
+
   const onCloseModal = useCallback(() => {
     setIsAuthModal(false);
   }, []);
 
-  const onOpenModal = useCallback(() => {
+  const onShowModal = useCallback(() => {
     setIsAuthModal(true);
   }, []);
 
@@ -41,22 +42,22 @@ export const Navbar = memo(({ className }: NavbarProps) => {
       </div>
     );
   }
+
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
       <Button
         theme={ButtonTheme.CLEAR_INVERTED}
         className={cls.links}
-        onClick={onOpenModal}
+        onClick={onShowModal}
       >
         {t('Войти')}
       </Button>
-      {isAuthModal
-        && (
-          <LoginModal
-            isOpen={isAuthModal}
-            onClose={onCloseModal}
-          />
-        )}
+      {isAuthModal && (
+        <LoginModal
+          isOpen={isAuthModal}
+          onClose={onCloseModal}
+        />
+      )}
     </div>
   );
 });

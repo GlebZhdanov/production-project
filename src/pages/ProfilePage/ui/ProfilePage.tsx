@@ -25,7 +25,7 @@ const reducers: ReducersList = {
 };
 
 interface ProfilePageProps {
-  className?: string,
+    className?: string;
 }
 
 const ProfilePage = ({ className }: ProfilePageProps) => {
@@ -37,12 +37,12 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   const readonly = useSelector(getProfileReadonly);
   const validateErrors = useSelector(getProfileValidateErrors);
 
-  const validateErrorsTranslate = {
-    [ValidateProfileError.SERVER_ERROR]: t('Серверная ошибка'),
-    [ValidateProfileError.NO_DATA]: t('Данные не указанны'),
+  const validateErrorTranslates = {
+    [ValidateProfileError.SERVER_ERROR]: t('Серверная ошибка при сохранении'),
+    [ValidateProfileError.INCORRECT_COUNTRY]: t('Некорректный регион'),
+    [ValidateProfileError.NO_DATA]: t('Данные не указаны'),
+    [ValidateProfileError.INCORRECT_USER_DATA]: t('Имя и фамилия обязательны'),
     [ValidateProfileError.INCORRECT_AGE]: t('Некорректный возраст'),
-    [ValidateProfileError.INCORRECT_USER_DATA]: t('Введи имя и фамилию'),
-    [ValidateProfileError.INCORRECT_COUNTRY]: t('Некорректный город'),
   };
 
   useEffect(() => {
@@ -85,24 +85,24 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames('', {}, [])}>
+      <div className={classNames('', {}, [className])}>
         <ProfilePageHeader />
         {validateErrors?.length && validateErrors.map((err) => (
           <Text
-            theme={TextTheme.ERROR}
-            text={validateErrorsTranslate[err]}
             key={err}
+            theme={TextTheme.ERROR}
+            text={validateErrorTranslates[err]}
           />
         ))}
         <ProfileCard
           data={formData}
           isLoading={isLoading}
           error={error}
+          readonly={readonly}
           onChangeFirstname={onChangeFirstname}
           onChangeLastname={onChangeLastname}
-          readonly={readonly}
-          onChangeCity={onChangeCity}
           onChangeAge={onChangeAge}
+          onChangeCity={onChangeCity}
           onChangeUsername={onChangeUsername}
           onChangeAvatar={onChangeAvatar}
           onChangeCurrency={onChangeCurrency}

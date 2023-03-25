@@ -2,18 +2,18 @@ import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { ChangeEvent, memo, useMemo } from 'react';
 import cls from './Select.module.scss';
 
-export interface SelectOptions {
-  value: string,
-  content: string,
+export interface SelectOption {
+    value: string;
+    content: string;
 }
 
 interface SelectProps {
-  className?: string,
-  label?: string,
-  options?: SelectOptions[],
-  value?: string,
-  onChange?: (value: string) => void;
-  readonly?: boolean,
+    className?: string;
+    label?: string;
+    options?: SelectOption[];
+    value?: string;
+    onChange?: (value: string) => void;
+    readonly?: boolean;
 }
 
 export const Select = memo((props: SelectProps) => {
@@ -21,8 +21,8 @@ export const Select = memo((props: SelectProps) => {
     className,
     label,
     options,
-    value,
     onChange,
+    value,
     readonly,
   } = props;
 
@@ -32,7 +32,7 @@ export const Select = memo((props: SelectProps) => {
     }
   };
 
-  const optionList = useMemo(() => options?.map((opt) => (
+  const optionsList = useMemo(() => options?.map((opt) => (
     <option
       className={cls.option}
       value={opt.value}
@@ -42,24 +42,22 @@ export const Select = memo((props: SelectProps) => {
     </option>
   )), [options]);
 
-  const mods: Mods = {
-
-  };
+  const mods: Mods = {};
 
   return (
     <div className={classNames(cls.Wrapper, mods, [className])}>
       {label && (
         <span className={cls.label}>
-          {label}
+          {`${label}>`}
         </span>
       )}
       <select
+        disabled={readonly}
         className={cls.select}
         value={value}
         onChange={onChangeHandler}
-        disabled={readonly}
       >
-        {optionList}
+        {optionsList}
       </select>
     </div>
   );

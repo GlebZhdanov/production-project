@@ -5,10 +5,10 @@ import { memo, useCallback } from 'react';
 import { Currency } from '../../model/types/currency';
 
 interface CurrencySelectProps {
-  className?: string,
-  value?: Currency,
-  onChange?: (value: Currency) => void,
-  readonly?: boolean,
+    className?: string;
+    value?: Currency;
+    onChange?: (value: Currency) => void;
+    readonly?: boolean;
 }
 
 const options = [
@@ -17,13 +17,9 @@ const options = [
   { value: Currency.USD, content: Currency.USD },
 ];
 
-export const CurrencySelect = memo((props: CurrencySelectProps) => {
-  const {
-    className,
-    value,
-    onChange,
-    readonly,
-  } = props;
+export const CurrencySelect = memo(({
+  className, value, onChange, readonly,
+}: CurrencySelectProps) => {
   const { t } = useTranslation();
 
   const onChangeHandler = useCallback((value: string) => {
@@ -32,7 +28,7 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
 
   return (
     <Select
-      className={classNames('', {}, [])}
+      className={classNames('', {}, [className])}
       label={t('Укажите валюту')}
       options={options}
       value={value}

@@ -20,7 +20,6 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
         });
         keysToRemove = [];
       }
-
       return combinedReducer(state, action);
     },
     add: (key: StateSchemaKey, reducer: Reducer) => {
@@ -28,6 +27,7 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
         return;
       }
       reducers[key] = reducer;
+
       combinedReducer = combineReducers(reducers);
     },
     remove: (key: StateSchemaKey) => {

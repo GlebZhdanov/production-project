@@ -15,12 +15,12 @@
   "Войти": "Login",
   "increment": "increment",
   "decrement": "decrement",
-  "Имя пользователя": "Имя пользователя",
-  "Пароль": "Пароль",
-  "Выйти": "Выйти",
-  "PROFILE PAGE": "PROFILE PAGE",
-  "Отменить": "Отменить",
-  "Сохранить": "Сохранить",
-  "Укажите валюту": "Укажите валюту",
-  "Укажите страну": "Укажите страну"
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Auth form",
+  "Вы ввели неверный логин или пароль": "Uncorrect username or password",
+  "Выйти": "Logout",
+  "Укажите валюту": "Choose currency",
+  "Укажите страну": "Choose country",
+  "Профиль": "Profile"
 }
