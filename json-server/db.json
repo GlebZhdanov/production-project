@@ -85,19 +85,19 @@
   "comments": [
     {
       "id": "1",
-      "text": "some comment",
+      "text": "some comment12414",
       "articleId": "1",
       "userId": "1"
     },
     {
       "id": "2",
-      "text": "some comment 2",
+      "text": "some comment 2421412",
       "articleId": "1",
       "userId": "1"
     },
     {
       "id": "3",
-      "text": "some comment 3",
+      "text": "some comment 34141",
       "articleId": "1",
       "userId": "1"
     }
@@ -107,13 +107,15 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
     }
   ],
   "profile": {
@@ -124,6 +126,6 @@
     "country": "Belarus",
     "city": "Moscow",
     "username": "admin213",
-    "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
+    "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
   }
 }
