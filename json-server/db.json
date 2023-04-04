@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,30 @@
       "text": "some comment 34141",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "224242",
+      "id": "gpFkkBz"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Gleb Zhdanov",
+      "id": "FP_Cahi"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "2423523",
+      "id": "1fEarZY"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "fdsfdsfsdsdfsgfdgdsf",
+      "id": "8GkZL2q"
     }
   ],
   "users": [
@@ -118,14 +144,28 @@
       "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
     }
   ],
-  "profile": {
-    "first": "jgh",
-    "lastname": "asf",
-    "age": 465,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin213",
-    "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Egor",
+      "lastname": "asf",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "Egor",
+      "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
+    },
+    {
+      "id": "2",
+      "first": "Gleb",
+      "lastname": "Zhdanov",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "Gleb",
+      "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
+    }
+  ]
 }
