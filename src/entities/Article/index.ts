@@ -2,5 +2,7 @@ export {
   ArticleDetails,
 } from './ui/ArticleDetails/ArticleDetails';
 
-export type { Article } from './model/types/artical';
-export type { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
+export { Article, ArticleView } from './model/types/artical';
+export { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
+
+export { ArticleList } from './ui/ArticleList/ArticleList';
