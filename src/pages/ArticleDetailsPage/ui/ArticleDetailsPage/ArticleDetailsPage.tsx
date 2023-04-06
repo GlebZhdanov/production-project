@@ -16,7 +16,7 @@ import {
 import {
   addCommentForArticle,
 } from '../../model/services/addCommentForArticle/addCommentForArticle';
-import cls from './Arti cleDetailsPage.module.scss';
+import cls from './ArticleDetailsPage.module.scss';
 import { articleDetailsCommentReducer, getArticleComments } from '../../model/slices/articleDetailsCommentsSlice';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 
