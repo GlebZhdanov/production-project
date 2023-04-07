@@ -9,6 +9,7 @@ import {
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUserAuthData } from 'entities/User';
+import { Page } from 'shared/ui/Page/Page';
 import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderProps {
@@ -41,7 +42,7 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
   }, [dispatch]);
 
   return (
-    <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+    <Page className={classNames(cls.ProfilePageHeader, {}, [className])}>
       <Text title={t('Профиль')} />
       {canEdit && (
         <div className={cls.btnWrapper}>
@@ -75,6 +76,6 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
             )}
         </div>
       )}
-    </div>
+    </Page>
   );
 };
