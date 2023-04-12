@@ -51,8 +51,8 @@ export const ArticlesPageFilter = memo((props: ArticlesPageFilterProps) => {
   const onChangeOrder = useCallback((newOrder: SortOrder) => {
     dispatch(articlesPageActions.setOrder(newOrder));
     dispatch(articlesPageActions.setPage(1));
-    debounceFetchData();
-  }, [dispatch, debounceFetchData]);
+    fetchData();
+  }, [dispatch, fetchData]);
 
   const onChangeSort = useCallback((newSort: ArticleSortField) => {
     dispatch(articlesPageActions.setSort(newSort));
@@ -69,8 +69,8 @@ export const ArticlesPageFilter = memo((props: ArticlesPageFilterProps) => {
   const onChangeType = useCallback((value: ArticleType) => {
     dispatch(articlesPageActions.setType(value));
     dispatch(articlesPageActions.setPage(1));
-    debounceFetchData();
-  }, [dispatch, debounceFetchData]);
+    fetchData();
+  }, [dispatch, fetchData]);
 
   return (
     <div className={classNames(cls.ArticlesPageFilter, {}, [className])}>
