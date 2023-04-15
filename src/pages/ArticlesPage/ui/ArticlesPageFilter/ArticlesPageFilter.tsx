@@ -1,6 +1,4 @@
-import {
-  memo, ReactNode, useCallback, useMemo,
-} from 'react';
+import { memo, useCallback } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { ArticleViewSelector } from 'features/ArticleViewSelector';
@@ -9,11 +7,13 @@ import { articlesPageActions } from 'pages/ArticlesPage/model/slices/articlesPag
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import {
-  getArticlesPageOrder, getArticlesPageSearch,
-  getArticlesPageSort, getArticlesPageType,
+  getArticlesPageOrder,
+  getArticlesPageSearch,
+  getArticlesPageSort,
+  getArticlesPageType,
   getArticlesPageView,
 } from 'pages/ArticlesPage/model/selectors/articlePageSelectors';
-import { Card } from 'shared/ui/Card/Card';
+import { Card, CardTheme } from 'shared/ui/Card/Card';
 import { Input } from 'shared/ui/Input/Input';
 import { ArticleSortSelector } from 'entities/Article/ui/ArticleSortSelector/ArticleSortSelector';
 import { SortOrder } from 'shared/types';
@@ -83,14 +83,19 @@ export const ArticlesPageFilter = memo((props: ArticlesPageFilterProps) => {
         />
         <ArticleViewSelector view={view} onViewClick={onChangeView} />
       </div>
-      <Card className={cls.search}>
+      <Card
+        theme={CardTheme.NORMAL}
+        className={cls.search}
+      >
         <Input
+          className={cls.input}
           value={search}
           onChange={onChangeSearch}
           placeholder={t('Поиск')}
         />
       </Card>
       <ArticleTypeTabs
+        className={cls.tabs}
         value={type}
         onChangeType={onChangeType}
       />
