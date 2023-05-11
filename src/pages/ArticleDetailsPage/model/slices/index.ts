@@ -1,8 +1,8 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import {
   articleDetailsPageRecommendationsReducer,
-} from 'pages/ArticleDetailsPage/model/slices/articleDetailsPageRecommendationsSlice';
-import { articleDetailsCommentReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice';
+} from './articleDetailsPageRecommendationsSlice';
+import { articleDetailsCommentReducer } from './articleDetailsCommentsSlice';
 import { ArticleDetailsPageSchema } from '../types';
 
 export const articleDetailsPageReducer = combineReducers<ArticleDetailsPageSchema>({
