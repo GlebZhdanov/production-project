@@ -601,6 +601,18 @@
       "userId": "1",
       "text": "242141",
       "id": "yqFOlY5"
+    },
+    {
+      "articleId": "7",
+      "userId": "1",
+      "text": "241532",
+      "id": "5z1Qk8S"
+    },
+    {
+      "articleId": "7",
+      "userId": "1",
+      "text": "322352",
+      "id": "2K_Na8H"
     }
   ],
   "users": [
@@ -627,7 +639,7 @@
       "age": 465,
       "currency": "RUB",
       "country": "Belarus",
-      "city": "Moscow",
+      "city": "Moscow2",
       "username": "admin213",
       "avatar": "https://cdn2.duabhmoobtojsiab.com/img/kuvyoghmoobaHR0cHM6Ly9taXItczMtY2RuLWNmLmJlaGFuY2UubmV0L3Byb2plY3RfbW9kdWxlcy9tYXhfMTIwMC8wY2I2NDM1NTQ2MzA0NS41OTg1MGNiZGUxMGY3LmpwZw==.jpg"
     },
