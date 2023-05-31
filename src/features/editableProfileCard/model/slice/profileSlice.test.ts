@@ -1,11 +1,13 @@
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
+// eslint-disable-next-line gzh-plugin/path-cheker
+import { ProfileSchema } from 'features/editableProfileCard';
 import {
   profileActions,
   profileReducer,
 } from './profileSlice';
-import { ProfileSchema, ValidateProfileError } from '../types/profile';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
+import { ValidateProfileError } from '../types/editableProfileCardSchema';
 
 const data = {
   username: 'admin',
